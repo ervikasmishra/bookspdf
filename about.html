@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about us</title>
+    <!-- <link rel="stylesheet" href="css/about-stylesheet.css"> -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .nav-bar {
+            background: #1d4052;
+            color: #fff;
+            padding: 20px;
+            font-family: sans-serif;
+        }
+
+        .nav-bar p {
+            height: 45px;
+            float: left;
+            margin-left: 20px;
+        }
+
+        .nav-bar ul li a {
+            text-decoration: none;
+            color: rgb(207, 207, 207);
+        }
+        #active{
+            color: white;
+            font-weight: bold;
+        }
+        .nav-bar ul li a:hover {
+            color:white;
+        }
+
+        .menu-right {
+            text-align: right;
+        }
+
+        ul li {
+            display: inline-block;
+            margin: 20px;
+            list-style: none;
+
+        }
+
+        span {
+            margin: 0 20px;
+            font-size: 28px;
+            cursor: pointer;
+            display: none;
+        }
+
+        @media only screen and (max-width: 850px) {
+            span {
+                display: block;
+            }
+
+            ul li {
+                display: block;
+            }
+
+            ul {
+                display: none;
+            }
+        }
+
+        .box_title {
+            flex-wrap: wrap-reverse;
+        }
+
+        .box_text,
+        .box_img {
+            width: 340px;
+            margin: 20px;
+            padding: 3px;
+            text-align: justify;
+        }
+
+
+        .box_img img {
+            width: 350px;
+        }
+
+        .box_title,
+        .card_container {
+            display: flex;
+            width: 100%;
+            /* flex properties for flex container */
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            width: 200px;
+            height: 350px;
+            background-color: white;
+            box-shadow: .1px .1px, -.1px -.1px black;
+            margin: 10px;
+            padding: 3px;
+            text-align: justify;
+        }
+        .footer {
+            text-align: center;
+            color: white;
+            background-color: rgb(34, 33, 33);
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="nav-bar">
+        <p>Books Pdf</p>
+        <div class="menu-right">
+            <span onClick="navbtn()">&#9776;</span>
+            <ul id="menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="download.html">DOWNLOAD</a></li>
+                <li><a href="contact.html">LOGIN | REGISTRATION</a></li>
+                <li ><a id="active" href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="box_title">
+
+        <div class="box_text">
+            <b><i>About Us:</i><hr></b>
+            <p> We provide you pdf of books absolute free of cost.
+                You can choose diffrent catogories of books according to your choice. <br> <b><i>We wil happy to got happy
+                        you!</i></b></p>
+        </div>
+        <div class="box_img"> <img
+                src="book-open-pages-with-text-textbook-paper-notepad-with-bookmark_212005-165.jpg" alt="image">
+        </div>
+    </div>
+
+
+    <h2 style="clear: both;text-align: center;">Our Facilities :</h2><br>
+    <hr>
+    <br>
+    <div class="card_container">
+        <div class="card"><b>Free Book's PDF :</b><br><br>
+            <P>Generally there is a cost to e-book. Therefore, we have decided to provide free e-book while understanding your problem. Now you do not need to give cost to download PDF of books. Here you are being given a free of cost pdf.</P>
+
+        </div>
+        <div class="card"><b>Free Audible Book :</b><br><br>
+            <P>Nowadays people do not have time to read the bulk of pages of books.
+                The. books are being sold in mp3 format in the market. Users have to pay its price. We have decided to give a free Audible book to solve it.
+                </P>
+
+        </div>
+        <div class="card"><b>Resource of Genuine Content:</b><br><br>
+            <P>We are in effort to provide our users also provocers of genuine ideas and content. Soon you will be given good ideas and suggestion here.</P>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <h4>Books Pdf</h4>
+        <p>This website devloped only for demo <br> Not for speciafic use. So let's enjoy...! </p>
+        <p>© 2020 All rights reserved</p>
+    </div>
+    <script>
+        function navbtn() {
+            var x = document.getElementById("menu");
+
+            if (x.style.display == "block") {
+                x.style.display = "none";
+            }
+            else {
+                x.style.display = "block";
+            }
+        }
+        
+    </script>
+</body>
+
+</html>

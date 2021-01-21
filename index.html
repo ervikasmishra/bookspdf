@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>homepage</title>
+    <!-- <link rel="stylesheet" href="css/Home-style-sheet.css"> -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+
+        .nav-bar {
+          
+            color: black;
+            padding: 20px;
+            font-family: sans-serif;
+            transition: all 1s ease;
+        }
+
+        .sticky{
+            position: sticky;
+            top: 0;
+            background:#1d4052;
+            color: rgb(207, 207, 207);
+            padding: 20px;
+            font-family: sans-serif;
+            
+
+        }
+        
+
+        .nav-bar p {
+            height: 45px;
+            float: left;
+            margin-left: 20px;
+        }
+
+        .nav-bar ul li a {
+            text-decoration: none;
+            color: black;
+        }
+        .sticky ul li a {
+            text-decoration: none;
+            color: rgb(207, 207, 207);
+        }
+        #active{
+            color: white;
+            font-weight: bold;
+        }
+        .nav-bar ul li a:hover {
+            color:white;
+        }
+
+        .menu-right {
+            text-align: right;
+        }
+
+        ul li {
+            display: inline-block;
+            margin: 20px;
+            list-style: none;
+
+        }
+
+        span {
+            margin: 0 20px;
+            font-size: 28px;
+            cursor: pointer;
+            display: none;
+        }
+
+        @media only screen and (max-width: 850px) {
+            span {
+                display: block;
+            }
+
+            ul li {
+                display: block;
+            }
+
+            ul {
+                display: none;
+            }
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        .box_title {
+            flex-wrap: wrap-reverse;
+        }
+
+        .box_text,
+        .box_img,
+        .filter {
+            width: 340px;
+            margin: 10px;
+            padding: 3px;
+        }
+
+        .box_text {
+            text-align: justify;
+        }
+
+        .box_img img {
+            width: 340px;
+        }
+        /* .box_img{
+            filter: drop-shadow(1rem 1rem rgb(111, 111, 241));
+        } */
+
+        .box_title,
+        .container,
+        .filter_box {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            /* flex properties for flex container */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container,
+        .filter_box {
+            flex-wrap: wrap;
+        }
+
+        .item {
+            width: 200px;
+            height: 350px;
+            background-color: white;
+            box-shadow: .1px .1px, -.1px -.1px white;
+            margin: 10px;
+            padding: 3px;
+            /* flex properties for flex container */
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .item img {
+            height: 220px;
+            width: 100%;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: transparent;
+            border: 1px solid transparent;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: .25rem;
+            color: #007bff;
+            border: 2px outset #007bff;
+            outline: none;
+            font-family: inherit;
+            font-weight: 400;
+            /* transition */
+            transition: color .15s ease-in-out, background-color .30s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        .filter {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon img {
+            height: 20px;
+            width: 20px;
+            margin: 5px;
+        }
+
+        .fil_text a {
+            text-decoration: none;
+            color: black;
+            font-weight: 400px;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            background-color: rgb(34, 33, 33);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav-bar">
+
+        <p>Books Pdf</p>
+        <div class="menu-right">
+            <span onClick="navbtn()">&#9776;</span>
+            <ul id="menu">
+                <li><a id="active" href="index.html">HOME</a></li>
+                <li><a href="download.html">DOWNLOAD</a></li>
+                <li><a href="contact.html">LOGIN | REGISTRATION</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="box_title">
+        <div class="box_text">
+            <h3>Who We Are : <br>
+                <hr>
+            </h3>
+            <p> We provide you pdf of books absolute free of cost.
+                You can choose diffrent catogories of books according to your choice. <br> <b><i>We wil happy to got happy
+                        you!</i></b></p>
+        </div>
+        <div class="box_img"> <img src="business-people-looking-book_52683-28612.jpg" alt="image"></div>
+    </div>
+   
+
+    <h4>Popular Books</h4>
+    <div class="container">
+        <div class="item" id="item-1"><img src="1.jpg" alt="">
+            <div class="card-text">
+                <p><b>HTML & CSS </b></p>
+                <button class="btn">Download</button>
+            </div>
+        </div>
+        <div class="item" id="item-2"><img src="2.jpg" alt="">
+            <div class="card-text">
+                <p><b>JAVA Absolute Biginner </b></p>
+                <button class="btn">Download</button>
+            </div>
+        </div>
+        <div class="item" id="item-3"><img src="3.jpg" alt="">
+            <div class="card-text">
+                <p><b>THE DAILY STOIC</b></p>
+                <button class="btn">Download</button>
+            </div>
+        </div>
+        <div class="item" id="item-4"><img src="4.jpg" alt="">
+            <div class="card-text">
+                <p><b>Books For Programmer</b></p>
+                <button class="btn">Download</button>
+            </div>
+        </div>
+        <div class="item" id="item-5"><img src="5.jpg" alt="">
+            <div class="card-text">
+                <p><b>Operating System concepts</b></p>
+                <button class="btn">Download</button>
+            </div>
+        </div>
+    </div>
+
+    <h4>You might looking for : </h4>
+
+    <div class="filter_box">
+        <div class="filter">
+            <div class="icon"><img src="academic & education.jpg" alt="loading..."></div>
+            <div class="fil_text"><a href="">Academic & Education</a></div>
+        </div>
+        <div class="filter">
+            <div class="icon"><img src="art.png" alt="loading..."></div>
+            <div class="fil_text"><a href="">Art</a></div>
+        </div>
+        <div class="filter">
+            <div class="icon"><img src="biography.png" alt="loading..."></div>
+            <div class="fil_text"><a href="">Biography</a></div>
+        </div>
+        <div class="filter">
+            <div class="icon"><img src="bussines & career.jpg" alt="loading..."></div>
+            <div class="fil_text"><a href="">Bussines & Career</a></div>
+        </div>
+        <div class="filter">
+            <div class="icon"><img src="children & youth.jpg" alt="loading..."></div>
+            <div class="fil_text"><a href="">Children & Youth</a></div>
+        </div>
+        <div class="filter">
+            <div class="icon"><img src="editor_pick.jpg" alt="loading..."></div>
+            <div class="fil_text"><a href="">Editor's Pick</a></div>
+        </div>
+        <div class="filter">
+            <div class="icon"><img src="environment.jpg" alt="loading..."></div>
+            <div class="fil_text"><a href="">Environment</a></div>
+        </div>
+        <div class="filter">
+            <div class="icon"><img src="fiction&litrature.png" alt="loading..."></div>
+            <div class="fil_text"><a href="">Fiction & Litrature</a></div>
+        </div>
+        <div class="filter">
+            <div class="icon"><img src="health&care.jpg" alt="loading..."></div>
+            <div class="fil_text"><a href="">Health & Care</a></div>
+        </div>
+        <div class="filter">
+            <div class="icon"><img src="lifestyle.jpg" alt="loading..."></div>
+            <div class="fil_text"><a href="">Lifestyle</a></div>
+        </div>
+        <div class="filter">
+            <div class="icon"><img src="personal growth.jpg" alt="loading..."></div>
+            <div class="fil_text"><a href="">Personal Growth</a></div>
+        </div>
+        <div class="filter">
+            <div class="icon"><img src="politics.jpg" alt="loading..."></div>
+            <div class="fil_text"><a href="">Politics</a></div>
+        </div>
+        <div class="filter">
+            <div class="icon"><img src="popular.jpg" alt="loading..."></div>
+            <div class="fil_text"><a href="">Popular</a></div>
+        </div>
+        <div class="filter">
+            <div class="icon"><img src="religion.jpg" alt="loading..."></div>
+            <div class="fil_text"><a href="">Religion</a></div>
+        </div>
+        <div class="filter">
+            <div class="icon"><img src="science.jpg" alt="loading..."></div>
+            <div class="fil_text"><a href="">Science & Research</a></div>
+        </div>
+        <div class="filter">
+            <div class="icon"><img src="technology.jpg" alt="loading..."></div>
+            <div class="fil_text"><a href="">Technology</a></div>
+        </div>
+    </div>
+    <div class="footer">
+        <h4>Books Pdf</h4>
+        <p>This website devloped only for demo <br> Not for speciafic use. So let's enjoy...! </p>
+        <p>© 2020 All rights reserved</p>
+    </div>
+    <script>
+        function navbtn() {
+            var x = document.getElementById("menu");
+
+            if (x.style.display == "block") {
+                x.style.display = "none";
+            }
+            else {
+                x.style.display = "block";
+            }
+        }
+        let elemClass = document.getElementsByClassName("nav-bar");
+       window.onscroll=()=>{
+           this.scrollY>30?elemClass[0].classList.add("sticky"):elemClass[0].classList.remove("sticky");
+       }
+    </script>
+</body>
+
+</html>
